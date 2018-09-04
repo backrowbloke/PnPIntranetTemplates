@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<!-- 
+Use
+===
+Toot site of Intranet or Contract
+Purpose
+=======
+Set up standard function site groups and add Nintex service account
+Parameters
+==========
+-->
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2018/05/ProvisioningSchema">
+  <pnp:Preferences Generator="OfficeDevPnP.Core, Version=2.27.1806.0, Culture=neutral, PublicKeyToken=5e633289e95c321a" />
+  <pnp:Templates ID="CONTAINER-TEMPLATE-INTRANET-SECURITY">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-INTRANET-SECURITY" Version="1" Scope="Web">
+      <pnp:Security BreakRoleInheritance="false">
+        <pnp:AdditionalAdministrators>
+          <pnp:User Name="i:0#.w|big-white01\srv-w2-pspNintexSP" />
+        </pnp:AdditionalAdministrators>
+        <pnp:SiteGroups>
+          <pnp:SiteGroup Title="Bids Owners" Description="Manage the Bids Area" Owner="{associatedownergroup}" AllowMembersEditMembership="false" AllowRequestToJoinLeave="false" AutoAcceptRequestToJoinLeave="false" OnlyAllowMembersViewMembership="false">
+            
+              
+            
+          </pnp:SiteGroup>
+          <pnp:SiteGroup Title="Communications Owners" Description="Manage the Communications Area" Owner="{associatedownergroup}" AllowMembersEditMembership="false" AllowRequestToJoinLeave="false" AutoAcceptRequestToJoinLeave="false" OnlyAllowMembersViewMembership="false">
+            
+              
+            
+          </pnp:SiteGroup>
+          <pnp:SiteGroup Title="Commercial Owners" Description="Manage the Commercial Area" Owner="{associatedownergroup}" AllowMembersEditMembership="false" AllowRequestToJoinLeave="false" AutoAcceptRequestToJoinLeave="false" OnlyAllowMembersViewMembership="false">
+            
+              
+            
+          </pnp:SiteGroup>
+          <pnp:SiteGroup Title="Facilities Owners" Description="Manage the Facilities Area" Owner="{associatedownergroup}" AllowMembersEditMembership="false" AllowRequestToJoinLeave="false" AutoAcceptRequestToJoinLeave="false" OnlyAllowMembersViewMembership="false">
+            
+              
+            
+          </pnp:SiteGroup>
+          <pnp:SiteGroup Title="Finance Owners" Description="Manage the Finance Area" Owner="{associatedownergroup}" AllowMembersEditMembership="false" AllowRequestToJoinLeave="false" AutoAcceptRequestToJoinLeave="false" OnlyAllowMembersViewMembership="false">
+            
+              
+            
+          </pnp:SiteGroup>
+          <pnp:SiteGroup Title="Health and Safety Owners" Description="Manage the Health and Safety Area" Owner="{associatedownergroup}" AllowMembersEditMembership="false" AllowRequestToJoinLeave="false" AutoAcceptRequestToJoinLeave="false" OnlyAllowMembersViewMembership="false">
+            
+              
+            
+          </pnp:SiteGroup>
+          <pnp:SiteGroup Title="Human Resources Owners" Description="Manage the Human Resources Area" Owner="{associatedownergroup}" AllowMembersEditMembership="false" AllowRequestToJoinLeave="false" AutoAcceptRequestToJoinLeave="false" OnlyAllowMembersViewMembership="false">
+            
+              
+            
+          </pnp:SiteGroup>
+          <pnp:SiteGroup Title="IT Owners" Description="Manage the IT Area" Owner="{associatedownergroup}" AllowMembersEditMembership="false" AllowRequestToJoinLeave="false" AutoAcceptRequestToJoinLeave="false" OnlyAllowMembersViewMembership="false">
+            
+              
+            
+          </pnp:SiteGroup>
+          <pnp:SiteGroup Title="Legal Owners" Description="Manage the Legal Area" Owner="{associatedownergroup}" AllowMembersEditMembership="false" AllowRequestToJoinLeave="false" AutoAcceptRequestToJoinLeave="false" OnlyAllowMembersViewMembership="false">
+            
+              
+            
+          </pnp:SiteGroup>
+          <pnp:SiteGroup Title="Procurement Owners" Description="Manage the Procurement Area" Owner="{associatedownergroup}" AllowMembersEditMembership="false" AllowRequestToJoinLeave="false" AutoAcceptRequestToJoinLeave="false" OnlyAllowMembersViewMembership="false">
+            
+              
+            
+          </pnp:SiteGroup>
+          <pnp:SiteGroup Title="Security and IA Owners" Description="Manage the Security and IA Area" Owner="{associatedownergroup}" AllowMembersEditMembership="false" AllowRequestToJoinLeave="false" AutoAcceptRequestToJoinLeave="false" OnlyAllowMembersViewMembership="false">
+            
+              
+            
+          </pnp:SiteGroup>
+
+          <pnp:SiteGroup Title="Operations Owners" Description="Manage the Operations Area" Owner="{associatedownergroup}" AllowMembersEditMembership="false" AllowRequestToJoinLeave="false" AutoAcceptRequestToJoinLeave="false" OnlyAllowMembersViewMembership="false">
+            
+              
+            
+          </pnp:SiteGroup>
+          
+          <pnp:SiteGroup Title="Bids Members" Description="Contribute in the Bids Area" Owner="Bids Owners" AllowMembersEditMembership="false" AllowRequestToJoinLeave="false" AutoAcceptRequestToJoinLeave="false" OnlyAllowMembersViewMembership="false">            
+          </pnp:SiteGroup>
+          <pnp:SiteGroup Title="Commercial Members" Description="Contribute in the Commercial Area" Owner="Commercial Owners" AllowMembersEditMembership="false" AllowRequestToJoinLeave="false" AutoAcceptRequestToJoinLeave="false" OnlyAllowMembersViewMembership="false">
+          </pnp:SiteGroup>
+          <pnp:SiteGroup Title="Communications Members" Description="Contribute in the Communications Area" Owner="Communications Owners" AllowMembersEditMembership="false" AllowRequestToJoinLeave="false" AutoAcceptRequestToJoinLeave="false" OnlyAllowMembersViewMembership="false">
+          </pnp:SiteGroup>
+          <pnp:SiteGroup Title="Facilities Members" Description="Contribute in the Facilities Area" Owner="Facilities Owners" AllowMembersEditMembership="false" AllowRequestToJoinLeave="false" AutoAcceptRequestToJoinLeave="false" OnlyAllowMembersViewMembership="false">
+          </pnp:SiteGroup>
+          <pnp:SiteGroup Title="Finance Members" Description="Contribute in the Finance Area" Owner="Finance Owners" AllowMembersEditMembership="false" AllowRequestToJoinLeave="false" AutoAcceptRequestToJoinLeave="false" OnlyAllowMembersViewMembership="false">
+          </pnp:SiteGroup>
+          <pnp:SiteGroup Title="Health and Safety Members" Description="Contribute in the Health and Safety Area" Owner="Health and Safety Owners" AllowMembersEditMembership="false" AllowRequestToJoinLeave="false" AutoAcceptRequestToJoinLeave="false" OnlyAllowMembersViewMembership="false">
+          </pnp:SiteGroup>
+          <pnp:SiteGroup Title="Human Resources Members" Description="Contribute in the Human Resources Area" Owner="Human Resources Owners" AllowMembersEditMembership="false" AllowRequestToJoinLeave="false" AutoAcceptRequestToJoinLeave="false" OnlyAllowMembersViewMembership="false">
+          </pnp:SiteGroup>
+          <pnp:SiteGroup Title="Legal Members" Description="Contribute in the Legal Area" Owner="Legal Owners" AllowMembersEditMembership="false" AllowRequestToJoinLeave="false" AutoAcceptRequestToJoinLeave="false" OnlyAllowMembersViewMembership="false">
+          </pnp:SiteGroup>
+          <pnp:SiteGroup Title="Procurement Members" Description="Contribute in the Procurement Area" Owner="Procurement Owners" AllowMembersEditMembership="false" AllowRequestToJoinLeave="false" AutoAcceptRequestToJoinLeave="false" OnlyAllowMembersViewMembership="false">
+          </pnp:SiteGroup>
+          <pnp:SiteGroup Title="Security and IA Members" Description="Contribute in the Security and IA Area" Owner="Security and IA Owners" AllowMembersEditMembership="false" AllowRequestToJoinLeave="false" AutoAcceptRequestToJoinLeave="false" OnlyAllowMembersViewMembership="false">
+          </pnp:SiteGroup>
+          <pnp:SiteGroup Title="IT Members" Description="Contribute in the IT Area" Owner="IT Owners" AllowMembersEditMembership="false" AllowRequestToJoinLeave="false" AutoAcceptRequestToJoinLeave="false" OnlyAllowMembersViewMembership="false">
+          <pnp:SiteGroup Title="Operations Members" Description="Contribute in the Operations Area" Owner="Operations Owners" AllowMembersEditMembership="false" AllowRequestToJoinLeave="false" AutoAcceptRequestToJoinLeave="false" OnlyAllowMembersViewMembership="false">
+          </pnp:SiteGroup>
+
+        </pnp:SiteGroups>
+        <pnp:Permissions>
+          <pnp:RoleAssignments>
+            <pnp:RoleAssignment Principal="Bids Owners" RoleDefinition="Read"/>
+            <pnp:RoleAssignment Principal="Commercial Owners" RoleDefinition="Read"/>
+            <pnp:RoleAssignment Principal="Communications Owners" RoleDefinition="Read"/>
+            <pnp:RoleAssignment Principal="Facilities Owners" RoleDefinition="Read"/>
+            <pnp:RoleAssignment Principal="Finance Owners" RoleDefinition="Read"/>
+            <pnp:RoleAssignment Principal="Health and Safety Owners" RoleDefinition="Read"/>
+            <pnp:RoleAssignment Principal="Human Resources Owners" RoleDefinition="Read"/>
+            <pnp:RoleAssignment Principal="Legal Owners" RoleDefinition="Read"/>
+            <pnp:RoleAssignment Principal="Procurement Owners" RoleDefinition="Read"/>
+            <pnp:RoleAssignment Principal="Security and IA Owners" RoleDefinition="Read"/>
+            <pnp:RoleAssignment Principal="IT Owners" RoleDefinition="Read"/>
+
+            <pnp:RoleAssignment Principal="Bids Members" RoleDefinition="Read"/>
+            <pnp:RoleAssignment Principal="Commercial Members" RoleDefinition="Read"/>
+            <pnp:RoleAssignment Principal="Communications Members" RoleDefinition="Read"/>
+            <pnp:RoleAssignment Principal="Facilities Members" RoleDefinition="Read"/>
+            <pnp:RoleAssignment Principal="Finance Members" RoleDefinition="Read"/>
+            <pnp:RoleAssignment Principal="Health and Safety Members" RoleDefinition="Read"/>
+            <pnp:RoleAssignment Principal="Human Resources Members" RoleDefinition="Read"/>
+            <pnp:RoleAssignment Principal="Legal Members" RoleDefinition="Read"/>
+            <pnp:RoleAssignment Principal="Procurement Members" RoleDefinition="Read"/>
+            <pnp:RoleAssignment Principal="Security and IA Members" RoleDefinition="Read"/>
+            <pnp:RoleAssignment Principal="IT Members" RoleDefinition="Read"/>
+          </pnp:RoleAssignments>
+        </pnp:Permissions>
+
+      </pnp:Security>
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>

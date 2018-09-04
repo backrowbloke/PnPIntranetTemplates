@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Elements>
+
+	<!--Babcock core fields-->
+
+	<Field Type="TaxonomyFieldType"
+		DisplayName="Classification Level"
+		StaticName="ClassificationLevel"
+		Name="ClassificationLevel"
+		ID="{4921873D-E87B-47DA-A658-CFDE2B849FA6}"
+		Group="Connect Columns"
+		Required="TRUE">
+		<Customization>
+			<ArrayOfProperty>	
+				<Property>
+					<Name>TextField</Name>
+					<Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{6b2bb84e-1f50-4c4f-a513-44b3c1fb8215}</Value>
+				</Property>
+				<Property>
+					<Name>Group</Name>
+					<Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">Global</Value>
+				</Property>
+				<Property>
+					<Name>TermSet</Name>
+				<Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">Classification Level</Value>
+				</Property>
+			</ArrayOfProperty>
+		</Customization>
+	</Field>
+	<Field Type="TaxonomyFieldType"
+		DisplayName="Organisation"
+		StaticName="Organisation"
+		Name="Organisation"
+		ID="{239BF07A-C81D-4E32-912B-D28F1DCA61F8}"
+		Group="Connect Columns">
+		<Customization>
+			<ArrayOfProperty>
+				<Property>
+					<Name>TextField</Name>
+					<Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{92c958e0-ebcc-45a5-80c1-32db7175143f}</Value>
+				</Property>
+				<Property>
+					<Name>Group</Name>
+					<Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">Global</Value>
+				</Property>
+				<Property>
+					<Name>TermSet</Name>
+					<Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">Organisation</Value>
+				</Property>
+			</ArrayOfProperty>
+		</Customization>
+	</Field>
+
+	<!--Babcock Managed Document Fields-->
+	<Field Type="Text"
+		DisplayName="Document Reference"
+		Required="FALSE"
+		EnforceUniqueValues="FALSE"
+		Indexed="FALSE"
+		MaxLength="255"
+		Group="Connect Columns"
+		ID="{58de06e9-7ebc-471e-9e7e-e105bc71eef3}"
+		StaticName="Document_x0020_Reference"
+	Name="Document_x0020_Reference"/>
+
+	<Field Type="User"
+		DisplayName="Document Owner"
+		List="UserInfo"
+		Required="FALSE"
+		EnforceUniqueValues="FALSE"
+		ShowField="ImnName"
+		UserSelectionMode="PeopleOnly"
+		UserSelectionScope="0"
+		Group="Connect Columns"
+		ID="{fbc1d293-dcfc-401b-9a41-025cfe6d1a5b}"
+		StaticName="Document_x0020_Owner"
+	Name="Document_x0020_Owner" />
+
+	<Field Type="Number"
+		DisplayName="Document Version"
+		Required="FALSE"
+		EnforceUniqueValues="FALSE"
+		Indexed="FALSE"
+		Group="Connect Columns"
+		ID="{97da94ef-558d-4317-90a3-08ad3285b92c}"
+		StaticName="Document_x0020_Version"
+	Name="Document_x0020_Version"/>
+
+	<Field Type="DateTime"
+		DisplayName="Document Review Date"
+		Required="FALSE"
+		EnforceUniqueValues="FALSE"
+		Indexed="FALSE"
+		Format="DateOnly"
+		Group="Connect Columns"
+		FriendlyDisplayFormat="Disabled"
+		ID="{c1f15f59-4ba6-4027-a1b9-4e2b6c2b897e}"
+		StaticName="Document_x0020_Review_x0020_Date"
+	Name="Document_x0020_Review_x0020_Date"/>
+	
+	<Field Type="TaxonomyFieldType"
+		DisplayName="Document Function"
+		StaticName="Document_x0020_Function"
+		Name="Document_x0020_Function"
+		ID="{4f400cf4-15e9-4f0b-9127-393560ad3095}"
+		Group="Connect Columns">
+		<Customization>
+			<ArrayOfProperty>
+				<Property>
+					<Name>TextField</Name>
+					<Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{92c958e0-ebcc-45a5-80c1-32db7175143f}</Value>
+				</Property>
+				<Property>
+					<Name>Group</Name>
+					<Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">Global</Value>
+				</Property>
+				<Property>
+					<Name>TermSet</Name>
+					<Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">Organisation</Value>
+				</Property>
+			</ArrayOfProperty>
+		</Customization>
+	</Field>
+
+	<!--end babcock managed fields-->
+
+	<!--core documents-->
+	<ContentType Name="Connect Document" ID="0x01010047E81270CD024898973E66C04AD2D0EE" Group="Connect Content Types">
+		<FieldRefs>
+			<FieldRef ID="4921873D-E87B-47DA-A658-CFDE2B849FA6" Name="ClassificationLevel" />
+		</FieldRefs>
+	</ContentType>
+	<ContentType Name="Babcock Document" ID="0x01010047E81270CD024898973E66C04AD2D0EE01" Group="Connect Content Types">
+		<FieldRefs>
+			<FieldRef ID="239BF07A-C81D-4E32-912B-D28F1DCA61F8" Name="Organisation" />
+		</FieldRefs>
+	</ContentType>
+
+	<!--the babcock managed document inherits from Babcock document, so doesnt need classification and organisation-->
+	<ContentType Name="Babcock Managed Document" ID="0x01010047E81270CD024898973E66C04AD2D0EE0102" Group="Connect Content Types">
+		<FieldRefs>
+			<FieldRef ID="58de06e9-7ebc-471e-9e7e-e105bc71eef3" Name="Document_x0020_Reference" />
+			<FieldRef ID="fbc1d293-dcfc-401b-9a41-025cfe6d1a5b" Name="Document_x0020_Owner" />
+			<FieldRef ID="97da94ef-558d-4317-90a3-08ad3285b92c" Name="Document_x0020_Version"/>
+			<FieldRef ID="c1f15f59-4ba6-4027-a1b9-4e2b6c2b897e" Name="Document_x0020_Review_x0020_Date"/>
+			<!--<FieldRef ID="1DAB9B48-2D1A-47b3-878C-8E84F0D211BA" Name="_Status"/>-->
+			<FieldRef ID="4f400cf4-15e9-4f0b-9127-393560ad3095" Name="Document_x0020_Function"/>
+		</FieldRefs>
+	</ContentType>
+
+	<!--the following inherit from Babcock Manged document, so dont need additional fieldrefs-->
+	<ContentType Name="Babcock Policy" ID="0x01010047E81270CD024898973E66C04AD2D0EE010201" Group="Connect Content Types">
+	</ContentType>
+
+	<ContentType Name="Babcock Manual" ID="0x01010047E81270CD024898973E66C04AD2D0EE010202" Group="Connect Content Types">
+	</ContentType>
+
+	<ContentType Name="Babcock Procedure" ID="0x01010047E81270CD024898973E66C04AD2D0EE010203" Group="Connect Content Types">
+	</ContentType>
+
+	<ContentType Name="Babcock Risk Assessment" ID="0x01010047E81270CD024898973E66C04AD2D0EE010204" Group="Connect Content Types">
+	</ContentType>
+
+	<ContentType Name="Babcock Risk Register" ID="0x01010047E81270CD024898973E66C04AD2D0EE010205" Group="Connect Content Types">
+	</ContentType>
+
+	<ContentType Name="Babcock Guidance Note" ID="0x01010047E81270CD024898973E66C04AD2D0EE010206" Group="Connect Content Types">
+	</ContentType>
+
+	<ContentType Name="Babcock Toolbox Talks" ID="0x01010047E81270CD024898973E66C04AD2D0EE010207" Group="Connect Content Types">
+	</ContentType>
+
+	<ContentType Name="Babcock SHEQ Alert" ID="0x01010047E81270CD024898973E66C04AD2D0EE010208" Group="Connect Content Types">
+	</ContentType>
+
+	<ContentType Name="Babcock Design Specification" ID="0x01010047E81270CD024898973E66C04AD2D0EE010209" Group="Connect Content Types">
+	</ContentType>
+
+	<ContentType Name="Babcock Company Notice" ID="0x01010047E81270CD024898973E66C04AD2D0EE01020A" Group="Connect Content Types">
+	</ContentType>
+
+	<ContentType Name="Babcock Organisation Chart" ID="0x01010047E81270CD024898973E66C04AD2D0EE01020B" Group="Connect Content Types">
+	</ContentType>
+
+	<ContentType Name="Babcock Specification" ID="0x01010047E81270CD024898973E66C04AD2D0EE01020C" Group="Connect Content Types">
+	</ContentType>
+
+	<ContentType Name="Babcock Template" ID="0x01010047E81270CD024898973E66C04AD2D0EE01020D" Group="Connect Content Types">
+	</ContentType>
+
+	<ContentType Name="Babcock Guide" ID="0x01010047E81270CD024898973E66C04AD2D0EE01020E" Group="Connect Content Types">
+	</ContentType>
+
+	<ContentType Name="Babcock Record" ID="0x01010047E81270CD024898973E66C04AD2D0EE01020F" Group="Connect Content Types">
+	</ContentType>
+
+	<ContentType Name="Babcock Register" ID="0x01010047E81270CD024898973E66C04AD2D0EE010210" Group="Connect Content Types">
+	</ContentType>
+
+	<ContentType Name="Babcock Report" ID="0x01010047E81270CD024898973E66C04AD2D0EE010211" Group="Connect Content Types">
+	</ContentType>
+
+	<ContentType Name="Babcock Certificate" ID="0x01010047E81270CD024898973E66C04AD2D0EE010212" Group="Connect Content Types">
+	</ContentType>
+
+	<ContentType Name="Babcock Process Map" ID="0x01010047E81270CD024898973E66C04AD2D0EE010213" Group="Connect Content Types">
+	</ContentType>
+
+	<ContentType Name="Babcock Form" ID="0x01010047E81270CD024898973E66C04AD2D0EE010214" Group="Connect Content Types">
+	</ContentType>
+
+	<ContentType Name="Babcock Bulletin" ID="0x01010047E81270CD024898973E66C04AD2D0EE010215" Group="Connect Content Types">
+	</ContentType>
+
+	<ContentType Name="Babcock Marketing Material" ID="0x01010047E81270CD024898973E66C04AD2D0EE010216" Group="Connect Content Types">
+	</ContentType>
+
+	<ContentType Name="Babcock Minutes" ID="0x01010047E81270CD024898973E66C04AD2D0EE010217" Group="Connect Content Types">
+	</ContentType>
+
+	<ContentType Name="Babcock NDA" ID="0x01010047E81270CD024898973E66C04AD2D0EE010218" Group="Connect Content Types">
+	</ContentType>
+
+	<ContentType Name="Babcock Newsletter" ID="0x01010047E81270CD024898973E66C04AD2D0EE010219" Group="Connect Content Types">
+	</ContentType>
+
+	<ContentType Name="Babcock Notice" ID="0x01010047E81270CD024898973E66C04AD2D0EE01021A" Group="Connect Content Types">
+	</ContentType>
+
+	<ContentType Name="Babcock Poster" ID="0x01010047E81270CD024898973E66C04AD2D0EE01021B" Group="Connect Content Types">
+	</ContentType>
+
+	<!--babcock image-->
+	<ContentType ID="0x0101009148F5A04DDD49CBA7127AADA5FB792B00AADE34325A8B49CDA8BB4DB53328F21400BEA7EE2AEF064E44B2F0E42E102F81B2"
+		Name="Babcock Image"
+		Group="Connect Content Types">
+		<FieldRefs>
+			<FieldRef Name="ClassificationLevel" ID="4921873d-e87b-47da-a658-cfde2b849fa6"/>
+			<FieldRef Name="Organisation" ID="239bf07a-c81d-4e32-912b-d28f1dca61f8" />
+		</FieldRefs>
+	</ContentType>
+
+	<!--babcock video-->
+	<ContentType ID="0x0120D520A80800329553AB257620408D34380ABA1CDF5E"
+		Name="Babcock Video"
+		Group="Connect Content Types">
+		<FieldRefs>
+			<FieldRef Name="ClassificationLevel" ID="4921873d-e87b-47da-a658-cfde2b849fa6"/>
+			<FieldRef Name="Organisation" ID="239bf07a-c81d-4e32-912b-d28f1dca61f8" />
+		</FieldRefs>
+	</ContentType>
+
+	<!--babcock audio-->
+	<ContentType Name="Babcock Audio" ID="0x0101009148F5A04DDD49CBA7127AADA5FB792B006973ACD696DC4858A76371B2FB2F439A008C924B8EEDEDA643A281E11879D27A91" Group="Connect Content Types">
+		<FieldRefs>
+			<FieldRef Name="ClassificationLevel" ID="4921873d-e87b-47da-a658-cfde2b849fa6" />
+			<FieldRef Name="Organisation" ID="239bf07a-c81d-4e32-912b-d28f1dca61f8" />
+		</FieldRefs>
+	</ContentType>
+
+	<!--CONTENT TYPES NOT YET IN USE-->
+
+	<!--
+	<ContentType Name="Babcock RAID" ID="0x010013E66A828750BA40AFB946AB711F219C" Group="Connect Content Types">
+	<FieldRefs>
+	<FieldRef Name="ClassificationLevel" ID="4921873d-e87b-47da-a658-cfde2b849fa6" />
+	<FieldRef Name="Organisation" ID="239bf07a-c81d-4e32-912b-d28f1dca61f8" />
+	</FieldRefs>
+	</ContentType>
+	<ContentType Name="Babcock Risk" ID="0x010013E66A828750BA40AFB946AB711F219C01" Group="Connect Content Types">
+	<FieldRefs>
+	<FieldRef Name="ClassificationLevel" ID="4921873d-e87b-47da-a658-cfde2b849fa6" />
+	<FieldRef Name="Organisation" ID="239bf07a-c81d-4e32-912b-d28f1dca61f8" />
+	</FieldRefs>
+	</ContentType>
+	<ContentType Name="Babcock Assumption" ID="0x010013E66A828750BA40AFB946AB711F219C02" Group="Connect Content Types">
+	<FieldRefs>
+	<FieldRef Name="ClassificationLevel" ID="4921873d-e87b-47da-a658-cfde2b849fa6" />
+	<FieldRef Name="Organisation" ID="239bf07a-c81d-4e32-912b-d28f1dca61f8" />
+	</FieldRefs>
+	</ContentType>
+	<ContentType Name="Babcock Issue" ID="0x010013E66A828750BA40AFB946AB711F219C03" Group="Connect Content Types">
+	<FieldRefs>
+	<FieldRef Name="ClassificationLevel" ID="4921873d-e87b-47da-a658-cfde2b849fa6" />
+	<FieldRef Name="Organisation" ID="239bf07a-c81d-4e32-912b-d28f1dca61f8" />
+	</FieldRefs>
+	</ContentType>
+	<ContentType Name="Babcock Dependency" ID="0x010013E66A828750BA40AFB946AB711F219C04" Group="Connect Content Types">
+	<FieldRefs>
+	<FieldRef Name="ClassificationLevel" ID="4921873d-e87b-47da-a658-cfde2b849fa6" />
+	<FieldRef Name="Organisation" ID="239bf07a-c81d-4e32-912b-d28f1dca61f8" />
+	</FieldRefs>
+	</ContentType>
+	<ContentType Name="Babcock RFC" ID="0x0100B1FEEFAD8CE618418864CFF4411E7170" Group="Connect Content Types">
+	<FieldRefs>
+	<FieldRef Name="ClassificationLevel" ID="4921873d-e87b-47da-a658-cfde2b849fa6" />
+	<FieldRef Name="Organisation" ID="239bf07a-c81d-4e32-912b-d28f1dca61f8" />
+	</FieldRefs>
+	</ContentType>
+
+
+	<ContentType Name="Babcock Bid Document" ID="0x01010047E81270CD024898973E66C04AD2D0EE0103" Group="Connect Content Types">
+	</ContentType>
+	<ContentType Name="Babcock PID" ID="0x01010047E81270CD024898973E66C04AD2D0EE0104" Group="Connect Content Types">
+	</ContentType>
+	<ContentType Name="Babcock Support Document" ID="0x01010047E81270CD024898973E66C04AD2D0EE0105" Group="Connect Content Types">
+	</ContentType>
+	<ContentType Name="Babcock Test Script" ID="0x01010047E81270CD024898973E66C04AD2D0EE0106" Group="Connect Content Types">
+	</ContentType>
+
+	-->
+
+
+
+</Elements>

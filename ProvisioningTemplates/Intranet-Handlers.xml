@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!-- 
+Use
+===
+Root site of Intranet or Contract
+Purpose
+=======
+Register the enhancement custom action fo additonal CSS
+Parameters
+==========
+-->
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2018/05/ProvisioningSchema">
+  <pnp:Preferences Generator="OfficeDevPnP.Core, Version=2.27.1806.0, Culture=neutral, PublicKeyToken=5e633289e95c321a" />
+  <pnp:Templates ID="CONTAINER-TEMPLATE-INTRANET-CUSTOMACTIONS">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-INTRANET-CUSTOMACTIONS" Version="1" Scope="RootSite">
+      <pnp:Files>
+        <pnp:File Src="Files\enhanceIntranetNavigationCSS.js" Folder="{masterpagecatalog}/Enhancements" Overwrite="true" Level="Published" />
+        <pnp:File Src="Files\css_babcockfunctionnavigation.css" Folder="{masterpagecatalog}/Enhancements" Overwrite="true" Level="Published" />
+      </pnp:Files>
+      <pnp:CustomActions>
+        <pnp:SiteCustomActions>
+          <pnp:CustomAction Name="Enhance.enhanceIntranetNavigationCSS.js" Location="ScriptLink" Sequence="1102" Rights="" ScriptSrc="~SiteCollection/_catalogs/masterpage/Enhancements/enhanceIntranetNavigationCSS.js" RegistrationType="None" ClientSideComponentId="00000000-0000-0000-0000-000000000000" />
+        </pnp:SiteCustomActions>
+      </pnp:CustomActions>
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>

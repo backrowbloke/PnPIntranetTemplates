@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<!-- 
+Use
+===
+Root site of Intranet or Contract
+Purpose
+=======
+Rename standard content types with current site name
+Parameters
+==========
+-->
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2018/05/ProvisioningSchema">
+  <pnp:Preferences Generator="OfficeDevPnP.Core, Version=2.27.1806.0, Culture=neutral, PublicKeyToken=5e633289e95c321a" />
+  <pnp:Templates ID="CONTAINER-TEMPLATE-INTRANET-MANAGEDCONTENTTYPES">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-INTRANET-MANAGEDCONTENTTYPES" Version="1" Scope="RootSite">
+      <pnp:ContentTypes>
+      
+        <pnp:ContentType ID="0x01010047E81270CD024898973E66C04AD2D0EE010200BE8632D3FE39C140B8D3CFDE7229CFA7" Name="{sitename} Managed Document" Description="Create a new General Document." Group="_{sitename} Content Types">
+        </pnp:ContentType>
+        
+        <pnp:ContentType ID="0x01010047E81270CD024898973E66C04AD2D0EE01020100F3C93F7A54C63D4CB8B29689A71DE87E" Name="{sitename} Policy" Description="Create a new Policy." Group="_{sitename} Content Types">
+        </pnp:ContentType>
+        
+        <pnp:ContentType ID="0x01010047E81270CD024898973E66C04AD2D0EE01020200D6A6B23A512AA94EAA3350DB7273FF45" Name="{sitename} Manual" Description="Create a new Manual." Group="_{sitename} Content Types">
+        </pnp:ContentType>
+        
+        <pnp:ContentType ID="0x01010047E81270CD024898973E66C04AD2D0EE01020300D9DBFA6ADF69724BBF170A1602E953B2" Name="{sitename} Procedure" Description="Create a new Procedure." Group="_{sitename} Content Types">
+        </pnp:ContentType>
+        
+        <pnp:ContentType ID="0x01010047E81270CD024898973E66C04AD2D0EE010207002C3A0C6CADAA714F9F18D94C6D8F8F15" Name="{sitename} Toolbox Talks" Description="Create a new Toolbox Talks Document." Group="_{sitename} Content Types">
+        </pnp:ContentType>
+        
+        <pnp:ContentType ID="0x01010047E81270CD024898973E66C04AD2D0EE01020800D5C18B064DCEF346AD1F54731A997E9A" Name="{sitename} SHEQ Alert" Description="Create a new SHEQ Alert." Group="_{sitename} Content Types">
+        </pnp:ContentType>
+        
+        <pnp:ContentType ID="0x01010047E81270CD024898973E66C04AD2D0EE01020A002535A8524EE14D4595BF9F7B94495443" Name="{sitename} Company Notice" Description="Create a new Company Notice." Group="_{sitename} Content Types">
+        </pnp:ContentType>
+       
+        <pnp:ContentType ID="0x01010047E81270CD024898973E66C04AD2D0EE01020B00184F8740EEEE4640A3B57D6DFD97F31F" Name="{sitename} Organisation Chart" Description="Create a new Organisation Chart." Group="_{sitename} Content Types">
+        </pnp:ContentType>
+        
+        <pnp:ContentType ID="0x01010047E81270CD024898973E66C04AD2D0EE01020C008016E3A066AEF0458D4F9969294F64C0" Name="{sitename} Specification" Description="Create a new Specification." Group="_{sitename} Content Types">
+        </pnp:ContentType>
+        
+        <pnp:ContentType ID="0x01010047E81270CD024898973E66C04AD2D0EE01020D00314815A6C060C743841B581789A7C98C" Name="{sitename} Template" Description="Create a new Template." Group="_{sitename} Content Types">
+        </pnp:ContentType>
+       
+        <pnp:ContentType ID="0x01010047E81270CD024898973E66C04AD2D0EE01020E000D13EF5432C9064DB30839CEBDF1DCA2" Name="{sitename} Guide" Description="Create a new Guide." Group="_{sitename} Content Types">
+        </pnp:ContentType>
+       
+        <pnp:ContentType ID="0x01010047E81270CD024898973E66C04AD2D0EE0102100018063DB5C85D984DA75F47F01C9D7AD9" Name="{sitename} Register" Description="Create a new Register." Group="_{sitename} Content Types">
+        </pnp:ContentType>
+        
+        <pnp:ContentType ID="0x01010047E81270CD024898973E66C04AD2D0EE010212001B1FAF10723CE74D95558CE09718C004" Name="{sitename} Certificate" Description="Create a new Certificate." Group="_{sitename} Content Types">
+        </pnp:ContentType>
+       
+        <pnp:ContentType ID="0x01010047E81270CD024898973E66C04AD2D0EE0102130059AE6C721054454298430C968C6AC54D" Name="{sitename} Process Map" Description="Create a new Process Map." Group="_{sitename} Content Types">
+        </pnp:ContentType>
+       
+        <pnp:ContentType ID="0x01010047E81270CD024898973E66C04AD2D0EE01021400ADBA35951AE1874DBB2CC2B8F224606E" Name="{sitename} Form" Description="Create a new Form." Group="_{sitename} Content Types">
+        </pnp:ContentType>
+        
+        <pnp:ContentType ID="0x01010047E81270CD024898973E66C04AD2D0EE0102150048D9ABC416E56045874DEB31F08C8780" Name="{sitename} Bulletin" Description="Create a new Bulletin." Group="_{sitename} Content Types">
+        </pnp:ContentType>
+        
+        <pnp:ContentType ID="0x01010047E81270CD024898973E66C04AD2D0EE0102160082FBBFC9674998468D746928F838C0BC" Name="{sitename} Marketing Material" Description="Create new Marketing Material." Group="_{sitename} Content Types">
+
+        </pnp:ContentType>
+        
+        <pnp:ContentType ID="0x01010047E81270CD024898973E66C04AD2D0EE010217006F68A0657E69D942A3212E4FD6F4E12F" Name="{sitename} Minutes" Description="Create new Minutes." Group="_{sitename} Content Types">
+        </pnp:ContentType>
+        
+        <pnp:ContentType ID="0x01010047E81270CD024898973E66C04AD2D0EE0102190050F0BCB37A43DD4DBC0B8978EF0B9AF4" Name="{sitename} Newsletter" Description="Create a new Newsletter." Group="_{sitename} Content Types">
+
+        </pnp:ContentType>
+        
+        <pnp:ContentType ID="0x0101009148F5A04DDD49CBA7127AADA5FB792B00AADE34325A8B49CDA8BB4DB53328F21400BEA7EE2AEF064E44B2F0E42E102F81B200CDFF9BF84931E44E8CABFF1837D34392" Name="{sitename} Image" Description="Upload an image." Group="_{sitename} Content Types" >
+        </pnp:ContentType>
+
+      </pnp:ContentTypes>
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>

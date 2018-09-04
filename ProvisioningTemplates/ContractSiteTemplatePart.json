@@ -1,0 +1,518 @@
+{
+    "version":"1.0",
+    "siteCollectionTitle":"{parameter:siteCollectionTitle}",
+    "siteCollectionUrl":"{parameter:siteCollectionUrl}",
+    "organisationLabel":"{parameter:organisationLabel}",
+    "organisationGuid":"{parameter:organisationGuid}",
+    "functionLabel":"All",
+    "functionGuid": "5d61d754-2ba6-476d-a70b-27e9f6b4cc50",
+    "resourcesSearchQuery":"{parameter:resourcesSearchQuery}",
+    "newsFilterType":"{parameter:newsFilterType}",
+    "newsFilterValue":"{parameter:newsFilterValue}",
+    "templates":
+    [
+
+    ],
+    "webs":
+    [
+        
+       
+        {          
+           "web":{
+                "siteName":"Bids",
+                "url":"bids",
+                "functionLabel":"Bids",
+                "functionGuid": "89396cfe-39fc-4470-93b7-d504a1370bd0",
+                "resourcesSearchQuery":"{parameter:functionResourcesSearchQuery}",
+                "templates":
+                [
+                    {
+                        "template":"Intranet-Function-Security.xml"
+                    },
+                    {
+                        "template":"Intranet-Function-Pages.xml"
+                    }
+                ],
+                "webs":
+                [
+                    
+                   { 
+                       "web":{
+                            "siteName":"Working Area",
+                            "parentSiteName": "Bids",
+                            "url":"workingarea",
+                            "functionLabel":"Bids",
+                            "functionGuid": "89396cfe-39fc-4470-93b7-d504a1370bd0",
+                            "organisationLibraryUrl": "{parameter:organisationLibraryUrl}",
+                            "organisationPrivateLibraryUrl": "{parameter:organisationPrivateLibraryUrl}",
+                            "templates":
+                            [
+                                {
+                                    "template":"Intranet-Function-WorkingArea-Features.xml"
+                                },
+                                {
+                                    "template":"Contract-Function-WorkingArea-Library.xml"
+                                },
+                                {
+                                    "template":"Contract-Function-WorkingArea-Workflows.xml"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        { 
+            "web":{
+            "siteName":"Commercial",
+            "url":"commerical",
+            "functionLabel":"Procurement and Supply Chain",
+            "functionGuid": "353d5f1b-eaeb-4fe6-8dd1-762160b11166",
+            "resourcesSearchQuery":"{parameter:functionResourcesSearchQuery}",
+            "templates":
+            [
+                {
+                    "template":"Intranet-Function-Security.xml"
+                },
+                {
+                    "template":"Intranet-Function-Pages.xml"
+                }
+            ],
+            "webs":
+            [
+                
+               { 
+                   "web":{
+                        "siteName":"Working Area",
+                        "url":"workingarea",
+                        "parentSiteName": "Commercial",
+                        "functionLabel":"Procurement and Supply Chain",
+                        "functionGuid": "353d5f1b-eaeb-4fe6-8dd1-762160b11166",
+                        "organisationLibraryUrl": "{parameter:organisationLibraryUrl}",
+                        "organisationPrivateLibraryUrl": "{parameter:organisationPrivateLibraryUrl}",
+                        "templates":
+                        [
+                            {
+                                "template":"Intranet-Function-WorkingArea-Features.xml"
+                            },
+                            {
+                                "template":"Contract-Function-WorkingArea-Library.xml"
+                            },
+                            {
+                                "template":"Contract-Function-WorkingArea-Workflows.xml"
+                            }
+                        ]
+                    }
+                }
+            ]
+            
+
+            }
+        }, 
+        {          
+           "web":{
+                "siteName":"Communications",
+                "url":"communications",
+                "functionLabel":"Communications",
+                "functionGuid": "0081f193-f8eb-4a0f-b2b9-2d8876a9d4aa",
+                "resourcesSearchQuery":"{parameter:functionResourcesSearchQuery}",
+                "templates":
+                [
+                    {
+                        "template":"Intranet-Function-Security.xml"
+                    },
+                    {
+                        "template":"Intranet-Function-Pages.xml"
+                    }
+                ],
+                "webs":
+                [
+                    
+                   { 
+                       "web":{
+                            "siteName":"Working Area",
+                            "url":"workingarea",
+                            "parentSiteName": "Communications",
+                            "functionLabel":"Communications",
+                            "functionGuid": "0081f193-f8eb-4a0f-b2b9-2d8876a9d4aa",
+                            "organisationLibraryUrl": "{parameter:organisationLibraryUrl}",
+                            "organisationPrivateLibraryUrl": "{parameter:organisationPrivateLibraryUrl}",
+                            "templates":
+                            [
+                                {
+                                    "template":"Intranet-Function-WorkingArea-Features.xml"
+                                },
+                                {
+                                    "template":"Contract-Function-WorkingArea-Library.xml"
+                                },
+                                {
+                                    "template":"Contract-Function-WorkingArea-Workflows.xml"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }, 
+        {          
+           "web":{
+                "siteName":"Health and Safety",
+                "url":"healthandsafety",
+                "functionLabel":"Environment, Health and Safety",
+                "functionGuid": "a121d9ec-0689-4265-b265-39dce876413a",
+                "resourcesSearchQuery":"{parameter:functionResourcesSearchQuery}",
+                "templates":
+                [
+                    {
+                        "template":"Intranet-Function-Security.xml"
+                    },
+                    {
+                        "template":"Intranet-Function-Pages.xml"
+                    }
+                ],
+                "webs":
+                [
+                    
+                   { 
+                       "web":{
+                            "siteName":"Working Area",
+                            "url":"workingarea",
+                            "parentSiteName": "Health and Safety",
+                            "functionLabel":"Environment, Health and Safety",
+                            "functionGuid": "a121d9ec-0689-4265-b265-39dce876413a",
+                            "organisationLibraryUrl": "{parameter:organisationLibraryUrl}",
+                            "organisationPrivateLibraryUrl": "{parameter:organisationPrivateLibraryUrl}",
+                            "templates":
+                            [
+                                {
+                                    "template":"Intranet-Function-WorkingArea-Features.xml"
+                                },
+                                {
+                                    "template":"Contract-Function-WorkingArea-Library.xml"
+                                },
+                                {
+                                    "template":"Contract-Function-WorkingArea-Workflows.xml"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }, 
+        {          
+           "web":{
+                "siteName":"Facilities",
+                "url":"facilities",
+                "functionLabel":"Facilities, Estates and Property",
+                "functionGuid": "ea25237c-1fbf-4649-879e-fa022f4b4ff0",
+                "resourcesSearchQuery":"{parameter:functionResourcesSearchQuery}",
+                "templates":
+                [
+                    {
+                        "template":"Intranet-Function-Security.xml"
+                    },
+                    {
+                        "template":"Intranet-Function-Pages.xml"
+                    }
+                ],
+                "webs":
+                [
+                    
+                   { 
+                       "web":{
+                            "siteName":"Working Area",
+                            "url":"workingarea",
+                            "parentSiteName": "Facilities",
+                            "functionLabel":"Facilities, Estates and Property",
+                            "functionGuid": "ea25237c-1fbf-4649-879e-fa022f4b4ff0",
+                            "organisationLibraryUrl": "{parameter:organisationLibraryUrl}",
+                            "organisationPrivateLibraryUrl": "{parameter:organisationPrivateLibraryUrl}",
+                            "templates":
+                            [
+                                {
+                                    "template":"Intranet-Function-WorkingArea-Features.xml"
+                                },
+                                {
+                                    "template":"Contract-Function-WorkingArea-Library.xml"
+                                },
+                                {
+                                    "template":"Contract-Function-WorkingArea-Workflows.xml"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }, 
+        {          
+           "web":{
+                "siteName":"Finance",
+                "url":"finance",
+                "functionLabel":"Finance",
+                "functionGuid": "cd4bb7a9-6c2e-4981-a15f-64e528571a0e",
+                "resourcesSearchQuery":"{parameter:functionResourcesSearchQuery}",
+                "templates":
+                [
+                    {
+                        "template":"Intranet-Function-Security.xml"
+                    },
+                    {
+                        "template":"Intranet-Function-Pages.xml"
+                    }
+                ],
+                "webs":
+                [
+                    
+                   { 
+                       "web":{
+                            "siteName":"Working Area",
+                            "url":"workingarea",
+                            "parentSiteName": "Finance",
+                            "functionLabel":"Finance",
+                            "functionGuid": "cd4bb7a9-6c2e-4981-a15f-64e528571a0e",
+                            "organisationLibraryUrl": "{parameter:organisationLibraryUrl}",
+                            "organisationPrivateLibraryUrl": "{parameter:organisationPrivateLibraryUrl}",
+                            "templates":
+                            [
+                                {
+                                    "template":"Intranet-Function-WorkingArea-Features.xml"
+                                },
+                                {
+                                    "template":"Contract-Function-WorkingArea-Library.xml"
+                                },
+                                {
+                                    "template":"Contract-Function-WorkingArea-Workflows.xml"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }, 
+        {          
+           "web":{
+                "siteName":"IT",
+                "url":"it",
+                "functionLabel":"Information Technology",
+                "functionGuid": "1e9887f6-360d-41dc-b64f-a606d22d439c",
+                "resourcesSearchQuery":"{parameter:functionResourcesSearchQuery}",
+                "templates":
+                [
+                    {
+                        "template":"Intranet-Function-Security.xml"
+                    },
+                    {
+                        "template":"Intranet-Function-Pages.xml"
+                    }
+                ],
+                "webs":
+                [
+                    
+                   { 
+                       "web":{
+                            "siteName":"Working Area",
+                            "url":"workingarea",
+                            "parentSiteName": "IT",
+                            "functionLabel":"Information Technology",
+                            "functionGuid": "1e9887f6-360d-41dc-b64f-a606d22d439c",
+                            "organisationLibraryUrl": "{parameter:organisationLibraryUrl}",
+                            "organisationPrivateLibraryUrl": "{parameter:organisationPrivateLibraryUrl}",
+                            "templates":
+                            [
+                                {
+                                    "template":"Intranet-Function-WorkingArea-Features.xml"
+                                },
+                                {
+                                    "template":"Contract-Function-WorkingArea-Library.xml"
+                                },
+                                {
+                                    "template":"Contract-Function-WorkingArea-Workflows.xml"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }, 
+        {          
+           "web":{
+                "siteName":"Legal",
+                "url":"legal",
+                "functionLabel":"Compliance",
+                "functionGuid": "cc336b15-a445-433a-b724-8326ef5dc42e",
+                "resourcesSearchQuery":"{parameter:functionResourcesSearchQuery}",
+                "templates":
+                [
+                    {
+                        "template":"Intranet-Function-Security.xml"
+                    },
+                    {
+                        "template":"Intranet-Function-Pages.xml"
+                    }
+                ],
+                "webs":
+                [
+                    
+                   { 
+                       "web":{
+                            "siteName":"Working Area",
+                            "url":"workingarea",
+                            "parentSiteName": "Compliance",
+                            "functionLabel":"Compliance",
+                            "functionGuid": "cc336b15-a445-433a-b724-8326ef5dc42e",
+                            "organisationLibraryUrl": "{parameter:organisationLibraryUrl}",
+                            "organisationPrivateLibraryUrl": "{parameter:organisationPrivateLibraryUrl}",
+                            "templates":
+                            [
+                                {
+                                    "template":"Intranet-Function-WorkingArea-Features.xml"
+                                },
+                                {
+                                    "template":"Contract-Function-WorkingArea-Library.xml"
+                                },
+                                {
+                                    "template":"Contract-Function-WorkingArea-Workflows.xml"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }, 
+        {          
+           "web":{
+                "siteName":"Security and IA",
+                "url":"security",
+                "functionLabel":"Compliance",
+                "functionGuid": "cc336b15-a445-433a-b724-8326ef5dc42e",
+                "resourcesSearchQuery":"{parameter:functionResourcesSearchQuery}",
+                "templates":
+                [
+                    {
+                        "template":"Intranet-Function-Security.xml"
+                    },
+                    {
+                        "template":"Intranet-Function-Pages.xml"
+                    }
+                ],
+                "webs":
+                [
+                    
+                   { 
+                       "web":{
+                            "siteName":"Working Area",
+                            "url":"workingarea",
+                            "parentSiteName": "Security and IA",
+                            "functionLabel":"Compliance",
+                            "functionGuid": "cc336b15-a445-433a-b724-8326ef5dc42e",
+                            "organisationLibraryUrl": "{parameter:organisationLibraryUrl}",
+                            "organisationPrivateLibraryUrl": "{parameter:organisationPrivateLibraryUrl}",
+                            "templates":
+                            [
+                                {
+                                    "template":"Intranet-Function-WorkingArea-Features.xml"
+                                },
+                                {
+                                    "template":"Contract-Function-WorkingArea-Library.xml"
+                                },
+                                {
+                                    "template":"Contract-Function-WorkingArea-Workflows.xml"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }, 
+        {          
+           "web":{
+                "siteName":"Human Resources",
+                "url":"hr",
+                "functionLabel":"Organisation and Development",
+                "functionGuid": "9b6875c2-29cc-461f-afc3-6423cdc24571",
+                "resourcesSearchQuery":"{parameter:functionResourcesSearchQuery}",
+                "templates":
+                [
+                    {
+                        "template":"Intranet-Function-Security.xml"
+                    },
+                    {
+                        "template":"Intranet-Function-Pages.xml"
+                    }
+                ],
+                "webs":
+                [
+                    
+                   { 
+                       "web":{
+                            "siteName":"Working Area",
+                            "url":"workingarea",
+                            "parentSiteName": "Human Resources",
+                            "functionLabel":"Organisation and Development",
+                            "functionGuid": "9b6875c2-29cc-461f-afc3-6423cdc24571",
+                            "organisationLibraryUrl": "{parameter:organisationLibraryUrl}",
+                            "organisationPrivateLibraryUrl": "{parameter:organisationPrivateLibraryUrl}",
+                            "templates":
+                            [
+                                {
+                                    "template":"Intranet-Function-WorkingArea-Features.xml"
+                                },
+                                {
+                                    "template":"Contract-Function-WorkingArea-Library.xml"
+                                },
+                                {
+                                    "template":"Contract-Function-WorkingArea-Workflows.xml"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }, 
+        {          
+           "web":{
+                "siteName":"Operations",
+                "url":"operations",
+                "functionLabel":"Project Management",
+                "functionGuid": "0e7e5dec-14ad-48af-8a25-e9f6943cf363",
+                "resourcesSearchQuery":"{parameter:functionResourcesSearchQuery}",
+                "templates":
+                [
+                    {
+                        "template":"Intranet-Function-Security.xml"
+                    },
+                    {
+                        "template":"Intranet-Function-Pages.xml"
+                    }
+                ],
+                "webs":
+                [
+                    
+                   { 
+                       "web":{
+                            "siteName":"Working Area",
+                            "url":"workingarea",
+                            "parentSiteName": "Operations",
+                            "functionLabel":"Project Management",
+                            "functionGuid": "0e7e5dec-14ad-48af-8a25-e9f6943cf363",
+                            "organisationLibraryUrl": "{parameter:organisationLibraryUrl}",
+                            "organisationPrivateLibraryUrl": "{parameter:organisationPrivateLibraryUrl}",
+                            "templates":
+                            [
+                                {
+                                    "template":"Intranet-Function-WorkingArea-Features.xml"
+                                },
+                                {
+                                    "template":"Contract-Function-WorkingArea-Library.xml"
+                                },
+                                {
+                                    "template":"Contract-Function-WorkingArea-Workflows.xml"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

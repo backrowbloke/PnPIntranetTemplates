@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!-- 
+Use
+===
+Root site of Intranet or Contract
+Purpose
+=======
+Set up standard function site groups and add Nintex service account
+Parameters
+==========
+siteCollectionTitle:  Title of the site collection (or in excpetional circumstances the owners group name)
+-->
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2018/05/ProvisioningSchema">
+  <pnp:Preferences Generator="OfficeDevPnP.Core, Version=2.27.1806.0, Culture=neutral, PublicKeyToken=5e633289e95c321a" />
+  <pnp:Templates ID="CONTAINER-TEMPLATE-CONTRACT-FUNCTIONSECURITY">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-CONTRACT-FUNCTIONSECURITY" Version="1" Scope="Web">
+      <pnp:Security BreakRoleInheritance="true">
+        
+        <pnp:Permissions>
+          <pnp:RoleAssignments>
+            <pnp:RoleAssignment Principal="{sitename} Owners" RoleDefinition="Full Control"/>
+            <pnp:RoleAssignment Principal="{sitename} Members" RoleDefinition="Contribute no delete"/>
+            <pnp:RoleAssignment Principal="{parameter:siteCollectionTitle} Visitors" RoleDefinition="Read"/>
+            <pnp:RoleAssignment Principal="{parameter:siteCollectionTitle} Owners" RoleDefinition="Full Control"/>
+          </pnp:RoleAssignments>
+        </pnp:Permissions>
+
+      </pnp:Security>
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>

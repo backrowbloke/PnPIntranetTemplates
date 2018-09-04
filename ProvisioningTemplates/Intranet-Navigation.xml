@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!-- 
+Use
+===
+Root site of Intranet or Contract
+Purpose
+=======
+Set up standard top level navigation
+Parameters
+==========
+-->
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2018/05/ProvisioningSchema">
+  <pnp:Preferences Generator="OfficeDevPnP.Core, Version=2.27.1806.0, Culture=neutral, PublicKeyToken=5e633289e95c321a" />
+  <pnp:Templates ID="CONTAINER-TEMPLATE-INTRANET-NAVIGATION">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-INTRANET-NAVIGATION" Version="1" Scope="RootSite">
+      <pnp:Navigation AddNewPagesToNavigation="false" CreateFriendlyUrlsForNewPages="false">
+        <pnp:GlobalNavigation NavigationType="Structural">
+          <pnp:StructuralNavigation RemoveExistingNodes="true">
+            <pnp:NavigationNode Title="About Us" Url="{site}/aboutus">
+              <pnp:NavigationNode Title="News" Url="{site}/aboutus/Pages/News.aspx" />
+            </pnp:NavigationNode>
+            <pnp:NavigationNode Title="Functions" Url="{site}/pages/functions.aspx">
+              <pnp:NavigationNode Title="Bids" Url="{site}/bids" />
+              <pnp:NavigationNode Title="IT" Url="{site}/it" />          
+              <pnp:NavigationNode Title="Commercial" Url="{site}/commercial" />
+              <pnp:NavigationNode Title="Legal" Url="{site}/legal" />
+              <pnp:NavigationNode Title="Communications" Url="{site}/communications" />
+              <pnp:NavigationNode Title="Operations" Url="{site}/operations" />
+              <pnp:NavigationNode Title="Facilities" Url="{site}/facilities" />
+              <pnp:NavigationNode Title="Procurement" Url="{site}/procurement" />
+              <pnp:NavigationNode Title="Finance" Url="{site}/finance" />
+              <pnp:NavigationNode Title="Security and IA" Url="{site}/security" />
+              <pnp:NavigationNode Title="Health and Safety" Url="{site}/healthandsafety" />
+              <pnp:NavigationNode Title="HR" Url="{site}/hr" />          
+            </pnp:NavigationNode>
+            <pnp:NavigationNode Title="Resources" Url="{site}/resources" />
+            <pnp:NavigationNode Title="Group" Url="/sites/group" IsExternal="true"/>
+          </pnp:StructuralNavigation>
+        </pnp:GlobalNavigation>
+      </pnp:Navigation>
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>

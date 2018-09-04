@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2018/05/ProvisioningSchema">
+  <pnp:Preferences Generator="OfficeDevPnP.Core, Version=2.27.1806.0, Culture=neutral, PublicKeyToken=5e633289e95c321a" />
+  <pnp:Templates ID="CONTAINER-TEMPLATE-CONTRACT-FUNCTION-WORKINGAREA-WORKFLOWS">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-CONTRACT-FUNCTION-WORKINGAREA-WORKFLOWS" Version="1" Scope="Web">
+      <pnp:Providers>
+        <pnp:Provider Enabled="true" HandlerType="SPR.Provisioning.PnpNintex, SPR.Provisioning, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0b6111688a847bb4">
+          <pnp:Configuration>
+            <WorkflowCollection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://babcockinternational.com">
+              <ListWorkflows>
+                <Workflows>
+                  <WorkflowInfo>
+                    <ID>f5c47c5a-ca7f-44d9-90c6-22b6c0cb5137</ID>
+                    <Name>{parameter:organisationLabel} Document Approval</Name>
+                    <InstantiationUrl>_layouts/15/NintexWorkflow/StartWorkflow.aspx</InstantiationUrl>
+                    <AssociationData>&lt;Data&gt;&lt;vTextOwnerLogin /&gt;&lt;vTextApprovalStatus /&gt;&lt;vActionID /&gt;&lt;vTextInitiatorLogin /&gt;&lt;vTextActionStatus /&gt;&lt;vTextOwnerIsValid&gt;true&lt;/vTextOwnerIsValid&gt;&lt;/Data&gt;</AssociationData>
+                    <BaseID>4015b503-27eb-42a3-925f-492f3e862637</BaseID>
+                    <ListID>3af3ff47-1040-4b0a-9c7b-37e3d6af97be</ListID>
+                    <ListName>{parameter:organisationLabel} Documents</ListName>
+                    <Scope>List</Scope>
+                    <Type>Nintex</Type>
+                    <FilePath>NintexWorkflows\DocumentApproval.xml</FilePath>
+                  </WorkflowInfo>
+                  <WorkflowInfo>
+                    <ID>f5c47c5a-ca7f-44d9-90c6-22b6c0cb5138</ID>
+                    <Name>{parameter:organisationLabel} Private Document Approval</Name>
+                    <InstantiationUrl>_layouts/15/NintexWorkflow/StartWorkflow.aspx</InstantiationUrl>
+                    <AssociationData>&lt;Data&gt;&lt;vTextOwnerLogin /&gt;&lt;vTextApprovalStatus /&gt;&lt;vActionID /&gt;&lt;vTextInitiatorLogin /&gt;&lt;vTextActionStatus /&gt;&lt;vTextOwnerIsValid&gt;true&lt;/vTextOwnerIsValid&gt;&lt;/Data&gt;</AssociationData>
+                    <BaseID>4015b503-27eb-42a3-925f-492f3e862637</BaseID>
+                    <ListID>3af3ff47-1040-4b0a-9c7b-37e3d6af97be</ListID>
+                    <ListName>{parameter:organisationLabel} Private Documents</ListName>
+                    <Scope>List</Scope>
+                    <Type>Nintex</Type>
+                    <FilePath>NintexWorkflows\DocumentApproval.xml</FilePath>
+                  </WorkflowInfo>
+                </Workflows>
+              </ListWorkflows>
+              <SiteWorkflows>
+                <Workflows>
+                  <WorkflowInfo>
+                    <ID>96422392-85bb-4ad3-8e14-923a53ac86a0</ID>
+                    <Name>Management Systems Individual Document Review</Name>
+                    <InstantiationUrl>_layouts/15/NintexWorkflow/StartWorkflow.aspx</InstantiationUrl>
+                    <AssociationData>&lt;Data&gt;&lt;vIntCollLength&gt;0&lt;/vIntCollLength&gt;&lt;vNumCounter&gt;0&lt;/vNumCounter&gt;&lt;Library_x005F_x0020_Name /&gt;&lt;Item_x005F_x0020_ID /&gt;&lt;vTextDocumentReference /&gt;&lt;vTextOwnerDisplayName /&gt;&lt;vTextFileName /&gt;&lt;vTextOwnerIsValid&gt;false&lt;/vTextOwnerIsValid&gt;&lt;vUserOwner /&gt;&lt;vCollItemsForReview /&gt;&lt;vTextOwnerLogin /&gt;&lt;vNoteEmailBody /&gt;&lt;vDateDocumentReview&gt;[today]&lt;/vDateDocumentReview&gt;&lt;vIntItemID&gt;0&lt;/vIntItemID&gt;&lt;Library_x005F_x0020_URL /&gt;&lt;/Data&gt;</AssociationData>
+                    <BaseID>c4a2fa95-3484-4264-9c7b-7023f02f10a1</BaseID>
+                    <Scope>ContentType</Scope>
+                    <Type>Nintex</Type>
+                    <FilePath>NintexWorkflows\IndividualDocumentReview.xml</FilePath>
+                  </WorkflowInfo>
+                  <WorkflowInfo>
+                    <ID>dd15f000-8a00-4d90-9b48-a82e0230b87a</ID>
+                    <Name>Management Systems Scheduled Document Review</Name>
+                    <InstantiationUrl>_layouts/15/NintexWorkflow/StartWorkflow.aspx</InstantiationUrl>
+                    <AssociationData>&lt;Data&gt;&lt;vTextDocumentReference /&gt;&lt;vUserOwner /&gt;&lt;vTextOwnerLogin /&gt;&lt;Library_x005F_x0020_Name /&gt;&lt;vNumCounter&gt;0&lt;/vNumCounter&gt;&lt;vIntItemID&gt;0&lt;/vIntItemID&gt;&lt;vIntDaysNotice&gt;0&lt;/vIntDaysNotice&gt;&lt;vTextFileName /&gt;&lt;vIntCollLength&gt;0&lt;/vIntCollLength&gt;&lt;vCollItemsForReview /&gt;&lt;vTextOwnerIsValid&gt;false&lt;/vTextOwnerIsValid&gt;&lt;Library_x005F_x0020_URL /&gt;&lt;/Data&gt;</AssociationData>
+                    <BaseID>ff649a61-0625-4b77-9e86-5eb5b802d97e</BaseID>
+                    <Scope>ContentType</Scope>
+                    <Type>Nintex</Type>
+                    <FilePath>NintexWorkflows\ScheduledDocumentReview.xml</FilePath>
+                  </WorkflowInfo>
+                </Workflows>
+              </SiteWorkflows>
+              <ContentTypeWorkflows>
+                <Workflows />
+              </ContentTypeWorkflows>
+            </WorkflowCollection>
+          </pnp:Configuration>
+        </pnp:Provider>
+      </pnp:Providers>
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>

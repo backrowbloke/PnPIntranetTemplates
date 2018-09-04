@@ -1,0 +1,225 @@
+<?xml version="1.0"?>
+<!-- 
+Use
+===
+Working Area Team site of a function within a Contract
+Purpose
+=======
+Set up standard function site groups and add Nintex service account
+Parameters
+==========
+functionLabel:                  Label of the Term for the function.
+functionGuid:                   Guid of the Term for the function.
+organisationLabel:              Label of the Term for the organisation
+organisationGuid:               Guid of the Term for the organisation
+organisationLibraryUrl:         Url to be used for the  document library such as ESTDocuments
+organisationPrivateLibraryUrl:  Url to be used for the private document library such as ESTPrivateDocuments
+-->
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2018/05/ProvisioningSchema">
+  <pnp:Preferences Generator="OfficeDevPnP.Core, Version=2.27.1806.0, Culture=neutral, PublicKeyToken=5e633289e95c321a" />
+  <pnp:Templates ID="CONTAINER-TEMPLATE-CONTRACT-FUNCTION-WORKINGAREA-LIBRARY">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-CONTRACT-FUNCTIONO-WORKINGAREA-LIBRARY" Version="1" Scope="Web">
+      <pnp:Lists>
+        
+        
+        <pnp:ListInstance Title="{parameter:organisationLabel} Documents" Description="" DocumentTemplate="{site}/{parameter:organisationLibraryUrl}/Forms/template.dotx" OnQuickLaunch="true" TemplateType="101" Url="{parameter:organisationLibraryUrl}" ForceCheckout="true" EnableVersioning="true" EnableMinorVersions="true" EnableModeration="true" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="1"  ContentTypesEnabled="true" EnableAttachments="false" DefaultDisplayFormUrl="{site}/{parameter:organisationLibraryUrl}/Forms/DispForm.aspx" DefaultEditFormUrl="{site}/{parameter:organisationLibraryUrl}/Forms/EditForm.aspx" DefaultNewFormUrl="{site}/{parameter:organisationLibraryUrl}/Forms/Upload.aspx" ImageUrl="/_layouts/15/images/itdl.png?rev=23" IsApplicationList="false" RemoveExistingContentTypes="true">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x01010047E81270CD024898973E66C04AD2D0EE010200BE8632D3FE39C140B8D3CFDE7229CFA7" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x01010047E81270CD024898973E66C04AD2D0EE01020100F3C93F7A54C63D4CB8B29689A71DE87E" />
+            <pnp:ContentTypeBinding ContentTypeID="0x01010047E81270CD024898973E66C04AD2D0EE01020200D6A6B23A512AA94EAA3350DB7273FF45" />
+            <pnp:ContentTypeBinding ContentTypeID="0x01010047E81270CD024898973E66C04AD2D0EE01020300D9DBFA6ADF69724BBF170A1602E953B2" />
+            <pnp:ContentTypeBinding ContentTypeID="0x01010047E81270CD024898973E66C04AD2D0EE010207002C3A0C6CADAA714F9F18D94C6D8F8F15" />
+            <pnp:ContentTypeBinding ContentTypeID="0x01010047E81270CD024898973E66C04AD2D0EE01020800D5C18B064DCEF346AD1F54731A997E9A" />
+            <pnp:ContentTypeBinding ContentTypeID="0x01010047E81270CD024898973E66C04AD2D0EE01020A002535A8524EE14D4595BF9F7B94495443" />
+            <pnp:ContentTypeBinding ContentTypeID="0x01010047E81270CD024898973E66C04AD2D0EE01020B00184F8740EEEE4640A3B57D6DFD97F31F" />
+            <pnp:ContentTypeBinding ContentTypeID="0x01010047E81270CD024898973E66C04AD2D0EE01020C008016E3A066AEF0458D4F9969294F64C0" />
+            <pnp:ContentTypeBinding ContentTypeID="0x01010047E81270CD024898973E66C04AD2D0EE01020D00314815A6C060C743841B581789A7C98C" />
+            <pnp:ContentTypeBinding ContentTypeID="0x01010047E81270CD024898973E66C04AD2D0EE01020E000D13EF5432C9064DB30839CEBDF1DCA2" />
+            <pnp:ContentTypeBinding ContentTypeID="0x01010047E81270CD024898973E66C04AD2D0EE0102100018063DB5C85D984DA75F47F01C9D7AD9" />
+            <pnp:ContentTypeBinding ContentTypeID="0x01010047E81270CD024898973E66C04AD2D0EE010212001B1FAF10723CE74D95558CE09718C004" />
+            <pnp:ContentTypeBinding ContentTypeID="0x01010047E81270CD024898973E66C04AD2D0EE0102130059AE6C721054454298430C968C6AC54D" />
+            <pnp:ContentTypeBinding ContentTypeID="0x01010047E81270CD024898973E66C04AD2D0EE01021400ADBA35951AE1874DBB2CC2B8F224606E" />
+            <pnp:ContentTypeBinding ContentTypeID="0x01010047E81270CD024898973E66C04AD2D0EE0102150048D9ABC416E56045874DEB31F08C8780" />
+            <pnp:ContentTypeBinding ContentTypeID="0x01010047E81270CD024898973E66C04AD2D0EE0102160082FBBFC9674998468D746928F838C0BC" />
+            <pnp:ContentTypeBinding ContentTypeID="0x01010047E81270CD024898973E66C04AD2D0EE010217006F68A0657E69D942A3212E4FD6F4E12F" />
+            <pnp:ContentTypeBinding ContentTypeID="0x01010047E81270CD024898973E66C04AD2D0EE0102190050F0BCB37A43DD4DBC0B8978EF0B9AF4" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0101" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Documents" Url="{site}/{parameter:organisationLibraryUrl}/Forms/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/dlicon.png?rev=23">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="FileLeafRef" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="DocIcon" />
+                <FieldRef Name="LinkFilename" />
+                <FieldRef Name="Modified" />
+                <FieldRef Name="Editor" />
+                <FieldRef Name="ContentType" />
+                <FieldRef Name="Document_x0020_Owner" />
+                <FieldRef Name="_dlc_DocIdUrl" />
+                <FieldRef Name="Document_x0020_Review_x0020_Date" />
+                <FieldRef Name="Document_x0020_Version" />
+                <FieldRef Name="_ModerationStatus" />
+                <FieldRef Name="ClassificationLevel" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+            <View Type="HTML" TabularView="FALSE" Scope="RecursiveAll" ModerationType="Contributor" DisplayName="My submissions" Url="{site}/{parameter:organisationLibraryUrl}/Forms/my-sub.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/dlicon.png?rev=23">
+              <Query>
+                <GroupBy>
+                  <FieldRef Name="_ModerationStatus" Ascending="FALSE" />
+                </GroupBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="DocIcon" />
+                <FieldRef Name="LinkFilename" />
+                <FieldRef Name="Modified" />
+                <FieldRef Name="Editor" />
+                <FieldRef Name="_ModerationStatus" />
+                <FieldRef Name="_ModerationComments" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+            
+          </pnp:Views>
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="e73677fa-7d76-4132-a604-e8eaf9f43095" Name="i39bf07ac81d4e32912bd28f1dca61f8" Hidden="true" DisplayName="Organisation_0" />
+            <pnp:FieldRef ID="92c958e0-ebcc-45a5-80c1-32db7175143f" Name="kf400cf415e94f0b9127393560ad3095" Hidden="true" DisplayName="Document Function_0" />
+            <pnp:FieldRef ID="53b77a30-1f89-4c95-b026-bb6e52435adf" Name="k921873de87b47daa658cfde2b849fa6" Hidden="true" DisplayName="Classification Level_0" />
+            <pnp:FieldRef ID="1390a86a-23da-45f0-8efe-ef36edadfb39" Name="TaxKeywordTaxHTField" Hidden="true" DisplayName="TaxKeywordTaxHTField" />
+            <pnp:FieldRef ID="ae3e2a36-125d-45d3-9051-744b513536a6" Name="_dlc_DocId" DisplayName="Document ID Value" />
+            <pnp:FieldRef ID="3b63724f-3418-461f-868b-7706f69b029c" Name="_dlc_DocIdUrl" DisplayName="Document ID" />
+            <pnp:FieldRef ID="58de06e9-7ebc-471e-9e7e-e105bc71eef3" Name="Document_x0020_Reference" DisplayName="Document Reference" />
+            <pnp:FieldRef ID="fbc1d293-dcfc-401b-9a41-025cfe6d1a5b" Name="Document_x0020_Owner" DisplayName="Document Owner" />
+            <pnp:FieldRef ID="97da94ef-558d-4317-90a3-08ad3285b92c" Name="Document_x0020_Version" DisplayName="Document Version" />
+            <pnp:FieldRef ID="c1f15f59-4ba6-4027-a1b9-4e2b6c2b897e" Name="Document_x0020_Review_x0020_Date" DisplayName="Document Review Date" />
+            <pnp:FieldRef ID="23f27201-bee3-471e-b2e7-b64fd8b7ca38" Name="TaxKeyword" DisplayName="Enterprise Keywords" />
+            <pnp:FieldRef ID="4921873d-e87b-47da-a658-cfde2b849fa6" Name="ClassificationLevel" DisplayName="Classification Level" />
+            <pnp:FieldRef ID="4f400cf4-15e9-4f0b-9127-393560ad3095" Name="Document_x0020_Function" DisplayName="Document Function" />
+            <pnp:FieldRef ID="239bf07a-c81d-4e32-912b-d28f1dca61f8" Name="Organisation" DisplayName="Organisation" />
+          </pnp:FieldRefs>
+         
+          <pnp:FieldDefaults>
+            <pnp:FieldDefault FieldName="Document_x0020_Function">-1;#{parameter:functionDefaultLabel}|{parameter:functionDefaultGuid}</pnp:FieldDefault>
+            <pnp:FieldDefault FieldName="Organisation">-1;#{parameter:organisationDefaultLabel}|{parameter:organisationDefaultGuid}</pnp:FieldDefault>
+          </pnp:FieldDefaults>
+
+<!--
+          <pnp:FieldDefaults>
+            <pnp:FieldDefault FieldName="Document_x0020_Function">-1;#Bids|89396cfe-39fc-4470-93b7-d504a1370bd0</pnp:FieldDefault>
+            <pnp:FieldDefault FieldName="Organisation">-1;#Emergency Services and Training|c78602f6-21a8-4094-8534-7f862250896b</pnp:FieldDefault>
+          </pnp:FieldDefaults>
+-->
+        </pnp:ListInstance>
+
+     <pnp:ListInstance Title="{parameter:organisationLabel} Private Documents" Description="" DocumentTemplate="{site}/{parameter:organisationPrivateLibraryUrl}/Forms/template.dotx" OnQuickLaunch="true" TemplateType="101" Url="{parameter:organisationPrivateLibraryUrl}" ForceCheckout="true" EnableVersioning="true" EnableMinorVersions="true" EnableModeration="true" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="1"  ContentTypesEnabled="true" EnableAttachments="false" DefaultDisplayFormUrl="{site}/{parameter:organisationPrivateLibraryUrl}/Forms/DispForm.aspx" DefaultEditFormUrl="{site}/{parameter:organisationPrivateLibraryUrl}/Forms/EditForm.aspx" DefaultNewFormUrl="{site}/{parameter:organisationPrivateLibraryUrl}/Forms/Upload.aspx" ImageUrl="/_layouts/15/images/itdl.png?rev=23" IsApplicationList="false" RemoveExistingContentTypes="true">
+        <pnp:Security>
+            <pnp:BreakRoleInheritance ClearSubscopes="true" CopyRoleAssignments="false">
+                <pnp:RoleAssignment Principal="{parameter:parentSiteName} Owners" RoleDefinition="Full Control"/>
+                <pnp:RoleAssignment Principal="{parameter:parentSiteName} Members" RoleDefinition="Contribute no delete"/>
+            </pnp:BreakRoleInheritance>
+        </pnp:Security>
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x01010047E81270CD024898973E66C04AD2D0EE010200BE8632D3FE39C140B8D3CFDE7229CFA7" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x01010047E81270CD024898973E66C04AD2D0EE01020100F3C93F7A54C63D4CB8B29689A71DE87E" />
+            <pnp:ContentTypeBinding ContentTypeID="0x01010047E81270CD024898973E66C04AD2D0EE01020200D6A6B23A512AA94EAA3350DB7273FF45" />
+            <pnp:ContentTypeBinding ContentTypeID="0x01010047E81270CD024898973E66C04AD2D0EE01020300D9DBFA6ADF69724BBF170A1602E953B2" />
+            <pnp:ContentTypeBinding ContentTypeID="0x01010047E81270CD024898973E66C04AD2D0EE010207002C3A0C6CADAA714F9F18D94C6D8F8F15" />
+            <pnp:ContentTypeBinding ContentTypeID="0x01010047E81270CD024898973E66C04AD2D0EE01020800D5C18B064DCEF346AD1F54731A997E9A" />
+            <pnp:ContentTypeBinding ContentTypeID="0x01010047E81270CD024898973E66C04AD2D0EE01020A002535A8524EE14D4595BF9F7B94495443" />
+            <pnp:ContentTypeBinding ContentTypeID="0x01010047E81270CD024898973E66C04AD2D0EE01020B00184F8740EEEE4640A3B57D6DFD97F31F" />
+            <pnp:ContentTypeBinding ContentTypeID="0x01010047E81270CD024898973E66C04AD2D0EE01020C008016E3A066AEF0458D4F9969294F64C0" />
+            <pnp:ContentTypeBinding ContentTypeID="0x01010047E81270CD024898973E66C04AD2D0EE01020D00314815A6C060C743841B581789A7C98C" />
+            <pnp:ContentTypeBinding ContentTypeID="0x01010047E81270CD024898973E66C04AD2D0EE01020E000D13EF5432C9064DB30839CEBDF1DCA2" />
+            <pnp:ContentTypeBinding ContentTypeID="0x01010047E81270CD024898973E66C04AD2D0EE0102100018063DB5C85D984DA75F47F01C9D7AD9" />
+            <pnp:ContentTypeBinding ContentTypeID="0x01010047E81270CD024898973E66C04AD2D0EE010212001B1FAF10723CE74D95558CE09718C004" />
+            <pnp:ContentTypeBinding ContentTypeID="0x01010047E81270CD024898973E66C04AD2D0EE0102130059AE6C721054454298430C968C6AC54D" />
+            <pnp:ContentTypeBinding ContentTypeID="0x01010047E81270CD024898973E66C04AD2D0EE01021400ADBA35951AE1874DBB2CC2B8F224606E" />
+            <pnp:ContentTypeBinding ContentTypeID="0x01010047E81270CD024898973E66C04AD2D0EE0102150048D9ABC416E56045874DEB31F08C8780" />
+            <pnp:ContentTypeBinding ContentTypeID="0x01010047E81270CD024898973E66C04AD2D0EE0102160082FBBFC9674998468D746928F838C0BC" />
+            <pnp:ContentTypeBinding ContentTypeID="0x01010047E81270CD024898973E66C04AD2D0EE010217006F68A0657E69D942A3212E4FD6F4E12F" />
+            <pnp:ContentTypeBinding ContentTypeID="0x01010047E81270CD024898973E66C04AD2D0EE0102190050F0BCB37A43DD4DBC0B8978EF0B9AF4" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0101" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Documents" Url="{site}/{parameter:organisationPrivateLibraryUrl}/Forms/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/dlicon.png?rev=23">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="FileLeafRef" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="DocIcon" />
+                <FieldRef Name="LinkFilename" />
+                <FieldRef Name="Modified" />
+                <FieldRef Name="Editor" />
+                <FieldRef Name="ContentType" />
+                <FieldRef Name="Document_x0020_Owner" />
+                <FieldRef Name="_dlc_DocIdUrl" />
+                <FieldRef Name="Document_x0020_Review_x0020_Date" />
+                <FieldRef Name="Document_x0020_Version" />
+                <FieldRef Name="_ModerationStatus" />
+                <FieldRef Name="ClassificationLevel" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+            <View Type="HTML" TabularView="FALSE" Scope="RecursiveAll" ModerationType="Contributor" DisplayName="My submissions" Url="{site}/{parameter:organisationPrivateLibraryUrl}/Forms/my-sub.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/dlicon.png?rev=23">
+              <Query>
+                <GroupBy>
+                  <FieldRef Name="_ModerationStatus" Ascending="FALSE" />
+                </GroupBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="DocIcon" />
+                <FieldRef Name="LinkFilename" />
+                <FieldRef Name="Modified" />
+                <FieldRef Name="Editor" />
+                <FieldRef Name="_ModerationStatus" />
+                <FieldRef Name="_ModerationComments" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+            
+          </pnp:Views>
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="e73677fa-7d76-4132-a604-e8eaf9f43095" Name="i39bf07ac81d4e32912bd28f1dca61f8" Hidden="true" DisplayName="Organisation_0" />
+            <pnp:FieldRef ID="92c958e0-ebcc-45a5-80c1-32db7175143f" Name="kf400cf415e94f0b9127393560ad3095" Hidden="true" DisplayName="Document Function_0" />
+            <pnp:FieldRef ID="53b77a30-1f89-4c95-b026-bb6e52435adf" Name="k921873de87b47daa658cfde2b849fa6" Hidden="true" DisplayName="Classification Level_0" />
+            <pnp:FieldRef ID="1390a86a-23da-45f0-8efe-ef36edadfb39" Name="TaxKeywordTaxHTField" Hidden="true" DisplayName="TaxKeywordTaxHTField" />
+            <pnp:FieldRef ID="ae3e2a36-125d-45d3-9051-744b513536a6" Name="_dlc_DocId" DisplayName="Document ID Value" />
+            <pnp:FieldRef ID="3b63724f-3418-461f-868b-7706f69b029c" Name="_dlc_DocIdUrl" DisplayName="Document ID" />
+            <pnp:FieldRef ID="58de06e9-7ebc-471e-9e7e-e105bc71eef3" Name="Document_x0020_Reference" DisplayName="Document Reference" />
+            <pnp:FieldRef ID="fbc1d293-dcfc-401b-9a41-025cfe6d1a5b" Name="Document_x0020_Owner" DisplayName="Document Owner" />
+            <pnp:FieldRef ID="97da94ef-558d-4317-90a3-08ad3285b92c" Name="Document_x0020_Version" DisplayName="Document Version" />
+            <pnp:FieldRef ID="c1f15f59-4ba6-4027-a1b9-4e2b6c2b897e" Name="Document_x0020_Review_x0020_Date" DisplayName="Document Review Date" />
+            <pnp:FieldRef ID="23f27201-bee3-471e-b2e7-b64fd8b7ca38" Name="TaxKeyword" DisplayName="Enterprise Keywords" />
+            <pnp:FieldRef ID="4921873d-e87b-47da-a658-cfde2b849fa6" Name="ClassificationLevel" DisplayName="Classification Level" />
+            <pnp:FieldRef ID="4f400cf4-15e9-4f0b-9127-393560ad3095" Name="Document_x0020_Function" DisplayName="Document Function" />
+            <pnp:FieldRef ID="239bf07a-c81d-4e32-912b-d28f1dca61f8" Name="Organisation" DisplayName="Organisation" />
+          </pnp:FieldRefs>
+         
+          <pnp:FieldDefaults>
+            <pnp:FieldDefault FieldName="Document_x0020_Function">-1;#{parameter:functionLabel}|{parameter:functionGuid}</pnp:FieldDefault>
+            <pnp:FieldDefault FieldName="Organisation">-1;#{parameter:organisationLabel}|{parameter:organisationGuid}</pnp:FieldDefault>
+          </pnp:FieldDefaults>
+<!--
+          <pnp:FieldDefaults>
+            <pnp:FieldDefault FieldName="Document_x0020_Function">-1;#Bids|89396cfe-39fc-4470-93b7-d504a1370bd0</pnp:FieldDefault>
+            <pnp:FieldDefault FieldName="Organisation">-1;#Emergency Services and Training|c78602f6-21a8-4094-8534-7f862250896b</pnp:FieldDefault>
+          </pnp:FieldDefaults>
+-->
+        </pnp:ListInstance>
+      
+      </pnp:Lists>
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>
